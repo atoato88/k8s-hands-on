@@ -1,0 +1,25 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: example-app-example-app
+  labels:
+    heritage: Tiller
+    release: example-app
+    chart: example-app-0.1.0
+    app: example-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: example-app
+        release: example-app
+    spec:
+      containers:
+        - name: example-app
+          image: "quay.io/brancz/prometheus-example-app:v0.1.0"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
