@@ -1,4 +1,4 @@
-# Builder for Golang
+# Builder for Go
 FROM golang as builder
 
 WORKDIR ${GOPATH}/src/github.com/user/app
