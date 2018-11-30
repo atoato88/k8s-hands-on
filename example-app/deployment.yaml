@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: example-app-example-app
+  name: hands-on-example-app
   labels:
     app: example-app
 spec:

@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: example-app
-  name: example-app-example-app
+  name: hands-on-example-app
 spec:
   type: "ClusterIP"
   clusterIP: ""
