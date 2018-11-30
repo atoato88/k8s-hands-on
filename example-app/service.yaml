@@ -3,9 +3,6 @@ kind: Service
 metadata:
   labels:
     app: example-app
-    chart: example-app-0.1.0
-    heritage: Tiller
-    release: example-app
   name: example-app-example-app
 spec:
   type: "ClusterIP"
@@ -17,4 +14,3 @@ spec:
       targetPort: 8080
   selector:
     app: example-app
-    release: example-app
