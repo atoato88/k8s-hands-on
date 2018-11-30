@@ -17,8 +17,17 @@ spec:
     spec:
       containers:
         - name: example-app
-          image: "quay.io/brancz/prometheus-example-app:v0.1.0"
+          image: "atoato88/k8s-hands-on:latest"
           imagePullPolicy: IfNotPresent
+          command:
+          - /root/app
+          - --message=Hello simple app from $(POD_IP)
+          env:
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
           ports:
             - name: http
               containerPort: 8080

@@ -6,8 +6,8 @@ replicaCount: 1
 restartPolicy: Never
 
 image:
-  repository: quay.io/brancz/prometheus-example-app
-  tag: v0.1.0
+  repository: atoato88/k8s-hands-on
+  tag: latest
   pullPolicy: IfNotPresent
 
 service:
